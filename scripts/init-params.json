@@ -1,0 +1,11 @@
+{
+  "project": "Desafio WA",
+  "repository": "git@github.com:Danieltp123/waproject-base-web.git",
+  "endpointDev": "http://localhost:3001",
+  "endpointProd": "",
+  "dockerImage": "waproject/desafio-wa",
+  "dockerCredentials": "",
+  "sentryDsn": "",
+  "confirmed": true,
+  "slug": "desafio-wa"
+}

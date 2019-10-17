@@ -1,4 +1,4 @@
-Projeto Base React
+Desafio WA
 ==================
 
 Utilize o VSCode, já está configurado com sugestão de extensões.
