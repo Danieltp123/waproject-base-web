@@ -150,7 +150,7 @@ export default class OrderFormDialog extends FormComponent<IProps, IState> {
                   label='Quantidade'
                   disabled={loading}
                   value={model.quantity}
-                  validation='required|numeric|min:1|max:100'
+                  validation='required|numeric|min:1|max:50'
                   type='number'
                   onChange={this.updateModel((model, v) => (model.quantity = v))}
                 />
