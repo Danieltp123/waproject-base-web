@@ -87,10 +87,12 @@ export default class UserFormDialog extends FormComponent<IProps, IState> {
           const { user } = this.props;
 
           this.setState({
-            roles: roles.map(r => ({
-              ...r,
-              selected: !user ? false : user.roles.includes(r.role)
-            })),
+            roles: roles
+              ? roles.map(r => ({
+                  ...r,
+                  selected: user && user.roles ? user.roles.includes(r.role) : false
+                }))
+              : [],
             loading: false
           });
         },
