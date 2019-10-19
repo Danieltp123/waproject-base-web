@@ -7,7 +7,7 @@ import * as RxOp from 'rxjs-operators';
 import apiService, { ApiService } from './api';
 
 export class OrderService {
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {}
 
   public list(params: IPaginationParams): Rx.Observable<IPaginationResponse<IOrder>> {
     return this.apiService.get('api/admin/order', params);
@@ -27,7 +27,6 @@ export class OrderService {
       RxOp.map(({ data }) => data)
     );
   }
-
 }
 
 const orderService = new OrderService(apiService);
