@@ -150,7 +150,7 @@ export abstract class ListComponent<P = {}, S extends IStateList = IStateList<an
   };
 
   labelDisplayedRows = ({ from, to, count }: LabelDisplayedRowsArgs) => `${from}-${to} de ${count}`;
-  onChangePage = (event: any, page: number) => this.handlePaginate(page + 1);
+  onChangePage = (event: any, page: number) => this.handlePaginate(page);
   onChangeRowsPerPage = (event: any) => this.handlePaginate(this.state.params.page, Number(event.target.value));
 
   renderSearch = (props: Partial<FieldText['props']> = {}) => {
@@ -236,7 +236,7 @@ export abstract class ListComponent<P = {}, S extends IStateList = IStateList<an
           count={total}
           rowsPerPage={pageSize}
           rowsPerPageOptions={[10, 25, 50]}
-          page={page - 1}
+          page={page}
           component={'div' as any}
           onChangePage={this.onChangePage}
           onChangeRowsPerPage={this.onChangeRowsPerPage}
